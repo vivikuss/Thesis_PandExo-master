@@ -1,0 +1,53 @@
+THE PHOENIX MODELS BY FRANCE ALLARD AND COLLABORATORS
+
+These models are for stars/brown dwarfs/planets (without irradiation), 
+with a cloud model. They use static, spherical symmetric, 1D simulations 
+to completely describe the atmospheric emission spectrum. The models account 
+for the formation of molecular bands, such as those of water vapor, methane, 
+or titanium dioxide, solving for the transfer equation over more than 20,000 
+wavelength points on average - producing synthetic spectra with 2 Angstrom
+resolution. The line selection is repeated at each iteration of the model
+until it has converged, and the thermal structure obtained. The models here
+are calculated with a cloud model, valid across the entire parameter range.
+
+More information can be found at: http://perso.ens-lyon.fr/france.allard/
+
+The models in this suite were resampled to reduce the number of points from the 
+original models. We reduce it to 5K across the 900 to 30microns wavelength range.
+Each directory in this suite includes all the models for a given metallicity. For
+example "phoenixm10" includes all the models for [M/H]=-1.0, where "m" is for minus
+and "p" is for plus. Each of the files in these directories is for a single Teff.
+These fits files have columns for different log_g. For example, the column for 
+log_g = 4.0 has column name g40, while that for log_g=3.0 has column g30.
+For all metallicities, except for [M/H]= 0.0, each model includes columns for 
+all log_gs in the range between 0.0 and 5.5. Those log_gs for which there are no 
+phoenix models have FLAM=0 for all wavelengths.
+
+We are in the process of replacing these models with an updated version that includes 
+more data points. The new models will have 100K points for each log_g. We have 
+done this only for models with metallicity = 0.0. These files are also slightly
+different from the previous cases in which each file includes columns only for 
+those log_gs for which the models exist. Not all the Teffs have the full range 
+of log_gs, which in this case goes from 0.0 to 6.0. The list of 
+log_g's included, as well as those missing, is provided in the header[0] of 
+each file. Note also that we had to redownload the orignial models from the
+author's site at https://phoenix.ens-lyon.fr/Grids/BT-Settl/AGSS2009/SPECTRA/. The
+models for metallicity = 0.0 and hot stars in this download 
+(BT-Settl_M-0.0_a+0.0_hot.tar), only included stars with Teff > 2600. 
+We, therefore, downloaded the BT-Settl_M-0.0_cool.tar to add stars with Teff between
+2000 and 2600, which was the case for our original models. Note that in this new
+set, as well as our original models, there were casese where there were four spectra 
+per file (the wavelengths were repeated four times within a given file), where each
+consisted of about 100K points. For these cases, we took only the first set of
+wavelengths and fluxes. However, there are a few cases where the full 400K+ points
+contained no repeated wavelengths.
+
+References:
+
+* Allard et al. ‘03, Allard et al. ‘07, Allard et al.
+‘09:http://perso.ens-lyon.fr/france.allard/
+
+* All these models can be found in the ‘Star, Brown Dwarf & Planet
+Simulator’:http://phoenix.ens-lyon.fr/simulator/index.faces
+
+Original files have names lte067-1.5-0.0.BT-Settl.7.bz2
