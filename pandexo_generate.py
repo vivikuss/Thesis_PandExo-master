@@ -9,10 +9,11 @@ import matplotlib.pyplot as plt
 
 ### ADJUST THIS PART ###
 # Paths
-os.environ['pandeia_refdata'] = '/Users/new/Desktop/THESIS/THESIS_PandExo-master/pandeia_data-4.1-jwst' 
-os.environ['PYSYN_CDBS'] = '/Users/new/Desktop/THESIS/THESIS_PandExo-master/grp/redcat/trds' 
-os.environ['EXOCTK_DATA'] = '/Users/new/Desktop/THESIS/THESIS_PandExo-master/path/to/venv/lib/python3.12/site-packages/exoctk/data'
-pic = '/Users/new/Desktop/THESIS/THESIS_picaso-master'
+user = f"/Users/new/Desktop/"           #### CUSTOMIZE ####
+os.environ['pandeia_refdata'] = user + 'THESIS_PandExo-master-main/pandeia_data-4.1-jwst' 
+os.environ['PYSYN_CDBS'] = user + 'THESIS_PandExo-master-main/grp/redcat/trds' 
+os.environ['EXOCTK_DATA'] = user + 'THESIS_PandExo-master-main/path/to/venv/lib/python3.12/site-packages/exoctk/data'
+pic = user + 'THESIS_picaso-master-main'
 # input_paths = [pic + '/spectrum_k218b_case1',pic + '/spectrum_k218b_case2', pic + '/spectrum_k218b_case3']  
 # output_paths = ['pandexo_k218b_spectrum1.txt','pandexo_k218b_spectrum2.txt','pandexo_k218b_spectrum3.txt']
 input_paths = [pic + '/spectrum_lhs_case1',pic + '/spectrum_lhs_case2', pic + '/spectrum_lhs_case3']  
