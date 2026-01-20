@@ -5,7 +5,7 @@ if not hasattr(np.lib, "function_base"):
     try:
         from numpy import trapz, histogram, percentile  # add 'trapz', 'histogram', 'percentile'
         np.lib.function_base = type("function_base", (), {
-            "trapz": trapz,
+            "trapz": trapezoid,
             "histogram": histogram,
             "percentile": percentile,
         })()
