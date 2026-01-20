@@ -6,7 +6,8 @@ from matplotlib import ticker
 
 ### ADJUST THIS PART ###
 # Paths
-pic = '/Users/new/Desktop/THESIS/THESIS_picaso-master'
+user = f"/Users/new/Desktop/"
+pic = user + 'THESIS_picaso-master-main'
 
 ### K2-18b
 #input_pandexo = ['pandexo_k218b_spectrum1.txt','pandexo_k218b_spectrum2.txt','pandexo_k218b_spectrum3.txt']
