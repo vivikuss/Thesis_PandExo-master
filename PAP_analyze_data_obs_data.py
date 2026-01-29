@@ -1,4 +1,5 @@
 
+
 import numpy as np
 
 # Monkey-patch: add 'bool' to numpy if missing
@@ -51,6 +52,10 @@ ppm = ppm[sorted_indices]
 err = err[sorted_indices]
 
 print(f"Damiano data imported")
+
+### radii ###                               # Damiano et al 2024
+Rp = 0.1543                         # Rjup
+Rstar = 2.0435                          # Rjup
 
 #labels = ['97.4% He, 0.8% CO2','47.4% He, 50.8% CO2','5% He, 95% CO2', '97.4% H2, 0.8% CO2']
 only_he = False         # Plot 97.4% He vs 47.4% He if True, plot 97.4% He vs 97.4% H2 if False
@@ -179,7 +184,8 @@ if(plot_all):
     #overplot Damiano data
     pandexo_min = np.min(pandexo_spec_fin)
     ppm_min = np.min(ppm)
-    ppm += pandexo_min - ppm_min
+    flat_spectrum = Rp**2/Rstar**2
+    ppm += flat_spectrum - ppm_min
 
     #ax2.plot(mu, ppm, color="black", linewidth=2.0)
     ax2.errorbar(mu, ppm, yerr=err, fmt = ".", ecolor="black", linewidth=3.0, capsize=2.5)
